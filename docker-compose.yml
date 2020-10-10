@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    container_name: manager
+    build:
+      context: .
+      dockerfile: ./dockerfile/Dockerfile
+    ports: 
+      - 8080:8080
+    volumes: 
+      - ./web:/web
+    tty: true
+
