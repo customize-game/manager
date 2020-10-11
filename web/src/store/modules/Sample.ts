@@ -6,12 +6,12 @@ export default {
     test: 0
   },
   mutations: {
-    updateTest(state, payload) {
+    updateTest(state:any, payload:any) {
       state.test = payload.test
     }
   },
   actions : {
-    getSample( context , parameters ) {
+    getSample( context:any , parameters:any ) {
       return axios.get(`/api/sample/${parameters}`)
         .then( response => context.commit('updateTest', {
           test: response.data.test

@@ -32,8 +32,8 @@ export default {
   },
   methods:{
     click(){
-    this.$store.dispatch('sample/getSample' , 2 )
-    .then( response => console.log( response ) )
+      this.$store.dispatch('sample/getSample' , 2 )
+      .then( response => console.log( response ) )
     }
   }
 }

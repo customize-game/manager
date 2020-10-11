@@ -1,11 +1,9 @@
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import sample from './modules/Sample'
 
-const store = new Vuex.Store({
+export default createStore({
   modules: {
-    sample ,
+    sample,
   },
   strict: process.env.NODE_ENV !== 'production',
 })
-
-export default store

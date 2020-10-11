@@ -1,16 +1,14 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
-<script>
-export default {
-  name: 'App',
+<script lang="ts">
+import { Vue } from 'vue-class-component';
+export default class App extends Vue {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
