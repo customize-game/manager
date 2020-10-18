@@ -1,21 +1,23 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/sample', 
-    name: 'Sample',
-    component: () => import ('@/containers/Sample.vue')
-  },
-  {
-    path: '/', 
-    name: 'Top',
-    component: () => import ('@/containers/Top.vue')
-  },
-]
+// page components
+import Notifies from '@/containers/Notifies.vue'
+import Top from '@/containers/Top.vue'
 
-const router = createRouter({
+export default createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes:[
+    {
+      path: '/notifies', 
+      name: 'Notifies',
+      component: Notifies
+    },
+    {
+      path: '/', 
+      name: 'Top',
+      component: Top
+    },
+  ]
 })
-
-export default router
+export const goTop = ( router : any ) => router.push( { name : 'Top' } )
+export const goNotifies = ( router : any ) => router.push( { name : 'Notifies' } )

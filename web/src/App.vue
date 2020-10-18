@@ -3,9 +3,12 @@
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-class-component';
-export default class App extends Vue {
-}
+import { defineComponent } from 'vue'
+export default defineComponent({
+  setup(){
+    return {}
+  }
+})
 </script>
 
 <style lang="scss">

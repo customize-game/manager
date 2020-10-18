@@ -1,9 +1,9 @@
 import { createStore } from 'vuex'
-import sample from './modules/Sample'
+import notify from './modules/notify'
 
 export default createStore({
   modules: {
-    sample,
+    notify,
   },
   strict: process.env.NODE_ENV !== 'production',
 })
