@@ -11,14 +11,12 @@ import { defineComponent } from 'vue'
 import MenuViewModel from '@/components/view-models/Menu.vue'
 
 export default defineComponent({
-  name: 'TopContainer',
+  name: 'RatesContainer',
   components : {
     MenuViewModel
   } ,
   setup(){
-    return {
-      MenuViewModel
-    }
+    return {}
   }
 })
 </script>

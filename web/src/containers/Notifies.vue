@@ -1,7 +1,6 @@
 <template>
   <div>
-    <button @click="clickTop">Top</button>
-    <button @click="clickNotify">Notify</button>
+    <menu-view-model />
     <notify-view-model />
     <notifies-view-model />
   </div>
@@ -9,30 +8,21 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useRouter } from 'vue-router'
-import { 
-  goNotifies ,
-  goTop
-} from '@/router'
 
 // view-models
+import MenuViewModel from '@/components/view-models/Menu.vue'
 import NotifyViewModel from '@/components/view-models/Notify.vue'
 import NotifiesViewModel from '@/components/view-models/Notifies.vue'
 
 export default defineComponent({
   name: 'NotifiesContainer',
   components: {
+    MenuViewModel ,
     NotifiesViewModel , 
     NotifyViewModel ,
   },
   setup(){
-    const router = useRouter()
-    const clickTop = () => goTop( router )
-    const clickNotify = () => goNotifies( router )
-    return {
-      clickTop ,
-      clickNotify
-    }
+    return {}
   }
 })
 </script>
