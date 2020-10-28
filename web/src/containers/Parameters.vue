@@ -1,7 +1,8 @@
 <template>
   <div>
     <menu-view-model />
-    <mysets-view-model />
+    <parameter-view-model />
+    <parameters-view-model />
   </div>
 </template>
 
@@ -10,13 +11,15 @@ import { defineComponent } from 'vue'
 
 // view-models
 import MenuViewModel from '@/components/view-models/Menu.vue'
-import MysetsViewModel from '@/components/view-models/mysets/Mysets.vue'
+import ParameterViewModel from '@/components/view-models/parameters/Parameter.vue'
+import ParametersViewModel from '@/components/view-models/parameters/Parameters.vue'
 
 export default defineComponent({
-  name: 'MysetsContainer',
+  name: 'ParameterChipsContainer',
   components : {
     MenuViewModel ,
-    MysetsViewModel , 
+    ParameterViewModel ,
+    ParametersViewModel ,
   } ,
   setup(){
     return {}

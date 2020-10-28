@@ -8,6 +8,9 @@ export default {
     list : []
   },
   mutations: {
+    registering( state : any , payload : boolean ){
+      state.registering = payload
+    } ,
     listUpdating( state : any , payload : boolean ){
       state.listUpdating = payload
     },
@@ -16,6 +19,14 @@ export default {
     }
   },
   actions : {
+    register( context : any , parameters : any ){
+      console.log( parameters )
+      context.commit( 'registering' , true )
+      axios.post( '/api/notifies' , parameters )
+      .then( () => {
+        context.commit( 'registering' , true )        
+      } )
+    } ,
     updateList( context:any , parameters : any ){
       context.commit( 'listUpdating' , true )
       axios.get( '/api/notifies' , parameters )

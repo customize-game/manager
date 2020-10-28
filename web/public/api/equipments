@@ -1,0 +1,404 @@
+{
+  "data":[
+    {
+      "id":0,
+      "name":"銃",
+      "flavor" : "強い" ,
+      "displayOrder" : 0 ,
+      "additionalInterfaceCount" : 1 ,
+      "equipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕" ,
+          "statuses" : [
+            {
+              "id" : 0 ,
+              "name" : "ステータスUP" ,
+              "type" : "multiplication" ,
+              "value" : "1.5"
+            }
+          ]
+        }
+      ] ,
+      "unEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "addEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "statuses" : [
+        {
+          "id" : 0 ,
+          "name" : "攻撃力" ,
+          "type" : "number" ,
+          "value" : 20
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "物理攻撃力" ,
+          "type" : "number" ,
+          "value" : 30
+        } ,
+        {
+          "id" : 2 ,
+          "name" : "暗視スコープ" ,
+          "type" : "boolean"
+        }
+      ]
+    } ,
+    {
+      "id":1,
+      "name":"剣", 
+      "flavor" : "強い" ,
+      "displayOrder" : 0 ,
+      "additionalInterfaceCount" : 1 ,
+      "equipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕" ,
+          "statuses" : [
+            {
+              "id" : 0 ,
+              "name" : "ステータスUP" ,
+              "type" : "multiplication" ,
+              "value" : "1.5"
+            }
+          ]
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "unEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左肩"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右肩"
+        }
+      ] ,
+      "addEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左肘" ,
+          "statuses" : [
+            {
+              "id" : 0 ,
+              "name" : "ステータスUP" ,
+              "type" : "multiplication" ,
+              "value" : "1.5"
+            }
+          ]
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右肘"
+        }
+      ] ,
+      "statuses" : [
+        {
+          "id" : 0 ,
+          "name" : "攻撃力" ,
+          "type" : "number" ,
+          "value" : 20
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "物理攻撃力" ,
+          "type" : "number" ,
+          "value" : 30
+        } ,
+        {
+          "id" : 2 ,
+          "name" : "暗視スコープ" ,
+          "type" : "boolean"
+        }
+      ]
+    } ,
+    {
+      "id":2,
+      "name":"盾", 
+      "flavor" : "強い" ,
+      "displayOrder" : 0 ,
+      "additionalInterfaceCount" : 1 ,
+      "equipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕" ,
+          "statuses" : [
+            {
+              "id" : 0 ,
+              "name" : "ステータスUP" ,
+              "type" : "multiplication" ,
+              "value" : "1.5"
+            }
+          ]
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕" ,
+          "statuses" : [
+            {
+              "id" : 0 ,
+              "name" : "ステータスUP" ,
+              "type" : "multiplication" ,
+              "value" : "1.5"
+            }
+          ]
+        }
+      ] ,
+      "unEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "addEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕" ,
+          "statuses" : [
+            {
+              "id" : 0 ,
+              "name" : "ステータスUP" ,
+              "type" : "multiplication" ,
+              "value" : "1.5"
+            }
+          ]
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕" ,
+          "statuses" : [
+            {
+              "id" : 0 ,
+              "name" : "ステータスUP" ,
+              "type" : "multiplication" ,
+              "value" : "1.5"
+            }
+          ]
+        }
+      ] ,
+      "statuses" : [
+        {
+          "id" : 0 ,
+          "name" : "攻撃力" ,
+          "type" : "number" ,
+          "value" : 20
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "物理攻撃力" ,
+          "type" : "number" ,
+          "value" : 30
+        } ,
+        {
+          "id" : 2 ,
+          "name" : "暗視スコープ" ,
+          "type" : "boolean"
+        }
+      ]
+    } ,
+    {
+      "id":3,
+      "name":"暗視スコープ", 
+      "flavor" : "強い" ,
+      "displayOrder" : 0 ,
+      "additionalInterfaceCount" : 1 ,
+      "equipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "unEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "addEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "statuses" : [
+        {
+          "id" : 0 ,
+          "name" : "攻撃力" ,
+          "type" : "number" ,
+          "value" : 20
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "物理攻撃力" ,
+          "type" : "number" ,
+          "value" : 30
+        } ,
+        {
+          "id" : 2 ,
+          "name" : "暗視スコープ" ,
+          "type" : "boolean"
+        }
+      ]
+    } ,
+    {
+      "id":4,
+      "name":"ザク", 
+      "flavor" : "強い" ,
+      "displayOrder" : 0 ,
+      "additionalInterfaceCount" : 1 ,
+      "equipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "unEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "addEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "statuses" : [
+        {
+          "id" : 0 ,
+          "name" : "攻撃力" ,
+          "type" : "number" ,
+          "value" : 20
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "物理攻撃力" ,
+          "type" : "number" ,
+          "value" : 30
+        } ,
+        {
+          "id" : 2 ,
+          "name" : "暗視スコープ" ,
+          "type" : "boolean"
+        }
+      ]
+    } ,
+    {
+      "id":5,
+      "name":"ドム", 
+      "flavor" : "強い" ,
+      "displayOrder" : 0 ,
+      "additionalInterfaceCount" : 1 ,
+      "equipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕" ,
+          "statuses" : [
+            {
+              "id" : 0 ,
+              "name" : "ステータスUP" ,
+              "type" : "multiplication" ,
+              "value" : "1.5"
+            }
+          ]
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "unEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "addEquipableParts" : [
+        {
+          "id" : 0 ,
+          "name" : "左腕"
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "右腕"
+        }
+      ] ,
+      "statuses" : [
+        {
+          "id" : 0 ,
+          "name" : "攻撃力" ,
+          "type" : "number" ,
+          "value" : 20
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "物理攻撃力" ,
+          "type" : "number" ,
+          "value" : 30
+        } ,
+        {
+          "id" : 2 ,
+          "name" : "暗視スコープ" ,
+          "type" : "boolean"
+        }
+      ]
+    }
+  ]
+}

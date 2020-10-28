@@ -2,7 +2,7 @@
   <div>
     <menu-view-model />
     <parameter-chip-view-model />
-    <parameter-chips-view-moidel />
+    <parameter-chips-view-model />
   </div>
 </template>
 

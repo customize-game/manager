@@ -3,17 +3,21 @@
     <table>
       <tr>
         <th>ID</th>
-        <th>ユーザID</th>
         <th>名前</th>
+        <th>フレーバー</th>
+        <th>種別</th>
+        <th>表示順序</th>
         <th></th>
         <th></th>
       </tr>
-      <tr v-for="myset in mysets" :key="myset.id">
-        <td>{{ myset.id }}</td>
-        <td>{{ myset.userId }}</td>
-        <td>{{ myset.name }}</td>
-        <td><button @click="()=>clickUpdateButton( myset.id )" >更新</button></td>
-        <td><button @click="()=>clickDeleteButton( myset.id )" >削除</button></td>
+      <tr v-for="parameter in parameters" :key="parameter.id">
+        <td>{{ parameter.id }}</td>
+        <td>{{ parameter.name }}</td>
+        <td>{{ parameter.flavor }}</td>
+        <td>{{ parameter.type }}</td>
+        <td>{{ parameter.displayOrder }}</td>
+        <td><button @click="()=>clickUpdateButton( parameter.id )" >更新</button></td>
+        <td><button @click="()=>clickDeleteButton( parameter.id )" >削除</button></td>
       </tr>
     </table>
   </div>
@@ -30,18 +34,18 @@ import {
 import { useStore } from 'vuex'
 
 export default defineComponent({
-  name: 'MysetsViewModel' ,
+  name: 'ParametersViewModel' ,
   setup( _  , context : SetupContext ){
     const state = reactive({})
     const store = useStore()
-    const mysets = computed( () => store.state.mysets.list )
-    const updateList = () => store.dispatch( 'mysets/updateList' )
+    const parameters = computed( () => store.state.parameters.list )
+    const updateList = () => store.dispatch( 'parameters/updateList' )
     const clickUpdateButton = ( id : number ) => context.emit( 'click-update-button' , id )
     const clickDeleteButton = ( id : number ) => context.emit( 'click-delete-button' , id )
     onMounted( updateList )
     return {
       state ,
-      mysets ,
+      parameters ,
       clickUpdateButton ,
       clickDeleteButton ,
     }

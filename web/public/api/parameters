@@ -1,0 +1,25 @@
+{
+  "data":[
+    {
+      "id":0,
+      "name":"物理攻撃力",
+      "flavor" : "打撃等の物理的な攻撃力" ,
+      "displayOrder" : 0 ,
+      "type" : "number"
+    } ,
+    {
+      "id":0,
+      "name":"暗視スコープ",
+      "flavor" : "暗闇でも赤外線センサーで周囲が確認できる" ,
+      "displayOrder" : 0 ,
+      "type" : "boolean"
+    },
+    {
+      "id":0,
+      "name":"暗視スコープ",
+      "flavor" : "暗闇でも赤外線センサーで周囲が確認できる" ,
+      "displayOrder" : 0 ,
+      "type" : "multiplication"
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "data":[
+    {
+      "id":0,
+      "name":"ドラえもん",
+      "ruby":"ふりがな",
+      "flavor" : "ネコ型ロボット" ,
+      "displayOrder" : 0 ,
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ] ,
+      "statuses" : [
+        {
+          "id" : 0 ,
+          "name" : "攻撃力" ,
+          "type" : "number" ,
+          "value" : 20
+        } ,
+        {
+          "id" : 1 ,
+          "name" : "物理攻撃力" ,
+          "type" : "number" ,
+          "value" : 30
+        } ,
+        {
+          "id" : 2 ,
+          "name" : "暗視スコープ" ,
+          "type" : "boolean"
+        }
+      ],
+      "freeSockets" : [
+        {
+          "id":0 ,
+          "x":0,
+          "y":0 ,
+          "statuses" : [
+            {
+              "id" : 0 ,
+              "name" : "ステータスUP" ,
+              "type" : "multiplication" ,
+              "value" : "1.5"
+            }
+          ]
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":0,
+          "y":1
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":1
+        }
+      ]
+    } ,
+    {
+      "id":1,
+      "name":"アトム", 
+      "ruby":"ふりがな",
+      "flavor" : "手塚治虫" ,
+      "displayOrder" : 0 ,
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ] ,
+      "statuses" : [],
+      "freeSockets" : [
+        {
+          "id":0 ,
+          "x":0,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":0,
+          "y":1
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":1
+        }
+      ]
+
+    } ,
+    {
+      "id":2,
+      "name":"コンボイ", 
+      "ruby":"ふりがな",
+      "flavor" : "ゴリラ型ロボット" ,
+      "displayOrder" : 0 ,
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ] ,
+      "statuses" : [],
+      "freeSockets" : [
+        {
+          "id":0 ,
+          "x":0,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":0,
+          "y":1
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":1
+        }
+      ]
+
+    } ,
+    {
+      "id":3,
+      "name":"ガンダム", 
+      "ruby":"ふりがな",
+      "flavor" : "連邦の白い悪魔" ,
+      "displayOrder" : 0 ,
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ] ,
+      "statuses" : [],
+      "freeSockets" : [
+        {
+          "id":0 ,
+          "x":0,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":0,
+          "y":1
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":1
+        }
+      ]
+
+    } ,
+    {
+      "id":4,
+      "name":"ザク", 
+      "ruby":"ふりがな",
+      "flavor" : "やられやく" ,
+      "displayOrder" : 0 ,
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ] ,
+      "statuses" : [],
+      "freeSockets" : [
+        {
+          "id":0 ,
+          "x":0,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":0,
+          "y":1
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":1
+        }
+      ]
+
+    } ,
+    {
+      "id":5,
+      "name":"ドム", 
+      "ruby":"ふりがな",
+      "flavor" : "デブ" ,
+      "displayOrder" : 0 ,
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ] ,
+      "statuses" : [],
+      "freeSockets" : [
+        {
+          "id":0 ,
+          "x":0,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":0
+        },
+        {
+          "id":0 ,
+          "x":0,
+          "y":1
+        },
+        {
+          "id":0 ,
+          "x":1,
+          "y":1
+        }
+      ]
+    }
+  ]
+}

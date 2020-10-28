@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="clickNewEquipment">新規装備作成</button>
+    <button @click="clickNewParameter">新規パラメータ作成</button>
     <div v-if="state.dialogShowing">
       <dialog-design 
         @click-close-button="clickCloseButton"
@@ -20,7 +20,7 @@ import { defineComponent , reactive , ref } from 'vue'
 import DialogDesign from '@/components/designs/Dialog.vue'
 
 export default defineComponent({
-  name: 'EquipmentViewModel',
+  name: 'ParameterViewModel',
   components : {
     DialogDesign
   } ,
@@ -30,7 +30,7 @@ export default defineComponent({
     })
     const idInputFieldRef = ref()
     const nameInputFieldRef = ref()
-    const clickNewEquipment = () => state.dialogShowing = true
+    const clickNewParameter = () => state.dialogShowing = true
     const clickCloseButton = () => state.dialogShowing = false
     const clickRegisterButton = () => {
       console.log( idInputFieldRef.value.state.data );
@@ -40,8 +40,8 @@ export default defineComponent({
       state ,
       idInputFieldRef ,
       nameInputFieldRef ,
-      clickNewEquipment ,
       clickCloseButton ,
+      clickNewParameter ,
       clickRegisterButton ,
     }
   }

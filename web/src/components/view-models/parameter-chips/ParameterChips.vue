@@ -1,28 +1,69 @@
 <template>
   <div>
-    <div v-for="notify in notifies" :key="notify.id">
-      <div>{{ notify.id }}</div>
-      <div>{{ notify.title }}</div>
-    </div>
-    <button @click="temp">temp</button>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>名前</th>
+        <th>ステータス</th>
+        <th>ピン(x,y)</th>
+        <th>表示順序</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr v-for="parameterChip in parameterChips" :key="parameterChip.id">
+        <td>{{ parameterChip.id }}</td>
+        <td>{{ parameterChip.name }}</td>
+        <td>
+          <div v-for="status in parameterChip.statuses" :key="status.id">
+            <template v-if="status.type=='number'">
+              {{ status.name }} : {{ status.value }}
+            </template>
+            <template v-if="status.type=='multiplication'" >
+              {{ status.name }} : ×{{ status.value }}
+            </template>
+            <template v-if="status.type=='boolean'">
+              {{ status.name }}
+            </template>
+          </div>
+        </td>
+        <td>
+          <div v-for="pin in parameterChip.pins" :key="pin.id">
+            ( {{ pin.x }} , {{ pin.y }} )
+          </div>
+        </td>
+        <td>{{ parameterChip.displayOrder }}</td>
+        <td><button @click="()=>clickUpdateButton( parameterChip.id )" >更新</button></td>
+        <td><button @click="()=>clickDeleteButton( parameterChip.id )" >削除</button></td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent , reactive , computed , onMounted } from 'vue'
+import { 
+  computed , 
+  defineComponent , 
+  onMounted , 
+  reactive , 
+  SetupContext 
+} from 'vue'
 import { useStore } from 'vuex'
 
 export default defineComponent({
-  name: 'ParameterChipsViewModel',
-  setup(){
+  name: 'ParameterChipsViewModel' ,
+  setup( _  , context : SetupContext ){
     const state = reactive({})
     const store = useStore()
-    const notifies = computed( () => store.state.notify.list )
-    const updateList = () => store.dispatch( 'notify/updateList' )
+    const parameterChips = computed( () => store.state.parameterChips.list )
+    const updateList = () => store.dispatch( 'parameterChips/updateList' )
+    const clickUpdateButton = ( id : number ) => context.emit( 'click-update-button' , id )
+    const clickDeleteButton = ( id : number ) => context.emit( 'click-delete-button' , id )
     onMounted( updateList )
     return {
       state ,
-      notifies
+      parameterChips ,
+      clickUpdateButton ,
+      clickDeleteButton ,
     }
   }
 })

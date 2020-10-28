@@ -1,28 +1,87 @@
 <template>
   <div>
-    <div v-for="notify in notifies" :key="notify.id">
-      <div>{{ notify.id }}</div>
-      <div>{{ notify.title }}</div>
-    </div>
-    <button @click="temp">temp</button>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>名前</th>
+        <th>ルビ</th>
+        <th>フレーバー</th>
+        <th>表示順序</th>
+        <th>装備可能箇所</th>
+        <th>ステータス</th>
+        <th>空きソケット(x,y)</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr v-for="body in bodies" :key="body.id">
+        <td>{{ body.id }}</td>
+        <td>{{ body.name }}</td>
+        <td>{{ body.ruby }}</td>
+        <td>{{ body.flavor }}</td>
+        <td>{{ body.displayOrder }}</td>
+        <td>
+          <div v-for="equipablePart in body.equipableParts" :key="equipablePart.id">
+            {{ equipablePart.name }}
+          </div>
+        </td>
+        <td>
+          <div v-for="status in body.statuses" :key="status.id">
+            <template v-if="status.type=='number'">
+              {{ status.name }} : {{ status.value }}
+            </template>
+            <template v-if="status.type=='boolean'">
+              {{ status.name }}
+            </template>
+          </div>
+        </td>
+        <td>
+          <div v-for="freeSocket in body.freeSockets" :key="freeSocket.id">
+            ( {{ freeSocket.x }} , {{ freeSocket.y  }} )
+            <div v-for="socketStatus in freeSocket.statuses" :key="socketStatus.id">
+              <template v-if="socketStatus.type=='number'" >
+                {{ socketStatus.name }} : {{ socketStatus.value }}
+              </template>
+              <template v-if="socketStatus.type=='multiplication'" >
+                {{ socketStatus.name }} : ×{{ socketStatus.value }}
+              </template>
+              <template v-if="socketStatus.type=='boolean'">
+                {{ socketStatus.name }}
+              </template>
+            </div>
+          </div>
+        </td>
+        <td><button @click="()=>clickUpdateButton( body.id )" >更新</button></td>
+        <td><button @click="()=>clickDeleteButton( body.id )" >削除</button></td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent , reactive , computed , onMounted } from 'vue'
+import { 
+  computed , 
+  defineComponent , 
+  onMounted , 
+  reactive , 
+  SetupContext 
+} from 'vue'
 import { useStore } from 'vuex'
 
 export default defineComponent({
-  name: 'BodiesViewModel',
-  setup(){
+  name : 'BodiesViewModel' ,
+  setup( _  , context : SetupContext ){
     const state = reactive({})
     const store = useStore()
-    const notifies = computed( () => store.state.notify.list )
-    const updateList = () => store.dispatch( 'notify/updateList' )
+    const bodies = computed( () => store.state.bodies.list )
+    const updateList = () => store.dispatch( 'bodies/updateList' )
+    const clickUpdateButton = ( id : number ) => context.emit( 'click-update-button' , id )
+    const clickDeleteButton = ( id : number ) => context.emit( 'click-delete-button' , id )
     onMounted( updateList )
     return {
       state ,
-      notifies
+      bodies ,
+      clickUpdateButton ,
+      clickDeleteButton ,
     }
   }
 })

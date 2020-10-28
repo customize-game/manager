@@ -1,28 +1,38 @@
 <template>
   <div>
-    <div v-for="notify in notifies" :key="notify.id">
-      <div>{{ notify.id }}</div>
-      <div>{{ notify.title }}</div>
-    </div>
-    <button @click="temp">temp</button>
+    <table>
+      <tr>
+        <th>ユーザID</th>
+        <th>レート</th>
+      </tr>
+      <tr v-for="rate in rates" :key="rate.id">
+        <td>{{ rate.userId }}</td>
+        <td>{{ rate.rate }}</td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent , reactive , computed , onMounted } from 'vue'
+import { 
+  computed , 
+  defineComponent , 
+  onMounted , 
+  reactive
+} from 'vue'
 import { useStore } from 'vuex'
 
 export default defineComponent({
-  name: 'RatesViewModel',
+  name: 'RatesViewModel' ,
   setup(){
     const state = reactive({})
     const store = useStore()
-    const notifies = computed( () => store.state.notify.list )
-    const updateList = () => store.dispatch( 'notify/updateList' )
+    const rates = computed( () => store.state.rates.list )
+    const updateList = () => store.dispatch( 'rates/updateList' )
     onMounted( updateList )
     return {
       state ,
-      notifies
+      rates
     }
   }
 })

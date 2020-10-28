@@ -1,7 +1,8 @@
 <template>
   <div>
     <menu-view-model />
-    <mysets-view-model />
+    <equipable-part-view-model />
+    <equipable-parts-view-model />
   </div>
 </template>
 
@@ -10,13 +11,15 @@ import { defineComponent } from 'vue'
 
 // view-models
 import MenuViewModel from '@/components/view-models/Menu.vue'
-import MysetsViewModel from '@/components/view-models/mysets/Mysets.vue'
+import EquipablePartViewModel from '@/components/view-models/equipable-parts/EquipablePart.vue'
+import EquipablePartsViewModel from '@/components/view-models/equipable-parts/EquipableParts.vue'
 
 export default defineComponent({
-  name: 'MysetsContainer',
+  name: 'EquipmentsContainer',
   components : {
     MenuViewModel ,
-    MysetsViewModel , 
+    EquipablePartViewModel ,
+    EquipablePartsViewModel , 
   } ,
   setup(){
     return {}

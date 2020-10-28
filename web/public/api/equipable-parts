@@ -1,0 +1,34 @@
+{
+  "data":[
+    {
+      "id":0,
+      "displayOrder" : 0 ,
+      "name":"頭"
+    } ,
+    {
+      "id":1,
+      "displayOrder" : 0 ,
+      "name":"腕"
+    } ,
+    {
+      "id":2,
+      "displayOrder" : 0 ,
+      "name":"足"
+    } ,
+    {
+      "id":3,
+      "displayOrder" : 0 ,
+      "name":"右腕"
+    } ,
+    {
+      "id":4,
+      "displayOrder" : 0 ,
+      "name":"右手"
+    } ,
+    {
+      "id":5,
+      "displayOrder" : 0 ,
+      "name":"右肩"
+    }
+  ]
+}

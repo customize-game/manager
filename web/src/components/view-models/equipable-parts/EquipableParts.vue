@@ -3,17 +3,17 @@
     <table>
       <tr>
         <th>ID</th>
-        <th>ユーザID</th>
         <th>名前</th>
+        <th>表示順序</th>
         <th></th>
         <th></th>
       </tr>
-      <tr v-for="myset in mysets" :key="myset.id">
-        <td>{{ myset.id }}</td>
-        <td>{{ myset.userId }}</td>
-        <td>{{ myset.name }}</td>
-        <td><button @click="()=>clickUpdateButton( myset.id )" >更新</button></td>
-        <td><button @click="()=>clickDeleteButton( myset.id )" >削除</button></td>
+      <tr v-for="equipablePart in equipableParts" :key="equipablePart.id">
+        <td>{{ equipablePart.id }}</td>
+        <td>{{ equipablePart.name }}</td>
+        <td>{{ equipablePart.displayOrder }}</td>
+        <td><button @click="()=>clickUpdateButton( equipablePart.id )" >更新</button></td>
+        <td><button @click="()=>clickDeleteButton( equipablePart.id )" >削除</button></td>
       </tr>
     </table>
   </div>
@@ -30,18 +30,18 @@ import {
 import { useStore } from 'vuex'
 
 export default defineComponent({
-  name: 'MysetsViewModel' ,
+  name : 'EquipablePartsViewModel' ,
   setup( _  , context : SetupContext ){
     const state = reactive({})
     const store = useStore()
-    const mysets = computed( () => store.state.mysets.list )
-    const updateList = () => store.dispatch( 'mysets/updateList' )
+    const equipableParts = computed( () => store.state.equipableParts.list )
+    const updateList = () => store.dispatch( 'equipableParts/updateList' )
     const clickUpdateButton = ( id : number ) => context.emit( 'click-update-button' , id )
     const clickDeleteButton = ( id : number ) => context.emit( 'click-delete-button' , id )
     onMounted( updateList )
     return {
       state ,
-      mysets ,
+      equipableParts ,
       clickUpdateButton ,
       clickDeleteButton ,
     }

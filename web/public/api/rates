@@ -1,0 +1,112 @@
+{
+  "data":[
+    {
+      "id":0,
+      "name":"ドラえもん",
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ]
+    } ,
+    {
+      "id":1,
+      "name":"アトム", 
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ]
+    } ,
+    {
+      "id":2,
+      "name":"コンボイ", 
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ]
+    } ,
+    {
+      "id":3,
+      "name":"ガンダム", 
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ]
+    } ,
+    {
+      "id":4,
+      "name":"ザク", 
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ]
+    } ,
+    {
+      "id":5,
+      "name":"ドム", 
+      "equipableParts" : [
+        {
+          "id":0 ,
+          "name":"右腕"
+        },
+        {
+          "id":1 ,
+          "name":"頭"
+        },
+        {
+          "id":2 ,
+          "name":"左腕"
+        }
+      ]
+    }
+  ]
+}
