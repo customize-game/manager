@@ -20,17 +20,10 @@
         <td>
           <div v-for="equipablePart in equipment.equipableParts" :key="equipablePart.id">
             {{ equipablePart.name }}
-            <div v-for="status in equipablePart.statuses" :key="status.id">
-              <template v-if="status.type=='number'">
-                {{ status.name }} : {{ status.value }}
-              </template>
-              <template v-if="status.type=='multiplication'" >
-                {{ status.name }} : ×{{ status.value }}
-              </template>
-              <template v-if="status.type=='boolean'">
-                {{ status.name }}
-              </template>
-            </div>
+            <status-design
+              v-for="status in equipablePart.statuses" :key="status.id"
+              :status="status"
+            ></status-design>
           </div>
         </td>
         <td>
@@ -41,28 +34,17 @@
         <td>
           <div v-for="addEquipablePart in equipment.addEquipableParts" :key="addEquipablePart.id">
             {{ addEquipablePart.name }}
-            <div v-for="status in addEquipablePart.statuses" :key="status.id">
-              <template v-if="status.type=='number'">
-                {{ status.name }} : {{ status.value }}
-              </template>
-              <template v-if="status.type=='multiplication'" >
-                {{ status.name }} : ×{{ status.value }}
-              </template>
-              <template v-if="status.type=='boolean'">
-                {{ status.name }}
-              </template>
-            </div>
+            <status-design
+              v-for="status in addEquipablePart.statuses" :key="status.id"
+              :status="status"
+            ></status-design>
           </div>
         </td>
         <td>
-          <div v-for="status in equipment.statuses" :key="status.id">
-            <template v-if="status.type=='number'">
-              {{ status.name }} : {{ status.value }}
-            </template>
-            <template v-if="status.type=='boolean'">
-              {{ status.name }}
-            </template>
-          </div>
+          <status-design
+            v-for="status in equipment.statuses" :key="status.id"
+            :status="status"
+          ></status-design>
         </td>
         <td>{{ equipment.additionalInterfaceCount }}</td>
         <td><button @click="()=>clickUpdateButton( equipment.id )" >更新</button></td>
@@ -82,8 +64,13 @@ import {
 } from 'vue'
 import { useStore } from 'vuex'
 
+import StatusDesign from '@/components/designs/Status.vue'
+
 export default defineComponent({
   name : 'EquipmentsViewModel' ,
+  components : {
+    StatusDesign
+  } ,
   setup( _  , context : SetupContext ){
     const state = reactive({})
     const store = useStore()

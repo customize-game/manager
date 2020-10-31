@@ -9,7 +9,8 @@
       "equipableParts" : [
         {
           "id" : 0 ,
-          "name" : "左腕"
+          "name" : "左腕",
+          "statuses" : []
         } ,
         {
           "id" : 1 ,
@@ -37,11 +38,13 @@
       "addEquipableParts" : [
         {
           "id" : 0 ,
-          "name" : "左腕"
+          "name" : "左腕",
+          "statuses" : []
         } ,
         {
           "id" : 1 ,
-          "name" : "右腕"
+          "name" : "右腕",
+          "statuses" : []
         }
       ] ,
       "statuses" : [
@@ -85,7 +88,8 @@
         } ,
         {
           "id" : 1 ,
-          "name" : "右腕"
+          "name" : "右腕",
+          "statuses" : []
         }
       ] ,
       "unEquipableParts" : [
@@ -113,7 +117,8 @@
         } ,
         {
           "id" : 1 ,
-          "name" : "右肘"
+          "name" : "右肘",
+          "statuses" : []
         }
       ] ,
       "statuses" : [
@@ -233,11 +238,13 @@
       "equipableParts" : [
         {
           "id" : 0 ,
-          "name" : "左腕"
+          "name" : "左腕",
+          "statuses" : []
         } ,
         {
           "id" : 1 ,
-          "name" : "右腕"
+          "name" : "右腕",
+          "statuses" : []
         }
       ] ,
       "unEquipableParts" : [
@@ -253,11 +260,13 @@
       "addEquipableParts" : [
         {
           "id" : 0 ,
-          "name" : "左腕"
+          "name" : "左腕",
+          "statuses" : []
         } ,
         {
           "id" : 1 ,
-          "name" : "右腕"
+          "name" : "右腕",
+          "statuses" : []
         }
       ] ,
       "statuses" : [
@@ -289,11 +298,13 @@
       "equipableParts" : [
         {
           "id" : 0 ,
-          "name" : "左腕"
+          "name" : "左腕",
+          "statuses" : []
         } ,
         {
           "id" : 1 ,
-          "name" : "右腕"
+          "name" : "右腕",
+          "statuses" : []
         }
       ] ,
       "unEquipableParts" : [
@@ -309,11 +320,13 @@
       "addEquipableParts" : [
         {
           "id" : 0 ,
-          "name" : "左腕"
+          "name" : "左腕",
+          "statuses" : []
         } ,
         {
           "id" : 1 ,
-          "name" : "右腕"
+          "name" : "右腕",
+          "statuses" : []
         }
       ] ,
       "statuses" : [
@@ -357,7 +370,8 @@
         } ,
         {
           "id" : 1 ,
-          "name" : "右腕"
+          "name" : "右腕",
+          "statuses" : []
         }
       ] ,
       "unEquipableParts" : [
@@ -373,11 +387,13 @@
       "addEquipableParts" : [
         {
           "id" : 0 ,
-          "name" : "左腕"
+          "name" : "左腕",
+          "statuses" : []
         } ,
         {
           "id" : 1 ,
-          "name" : "右腕"
+          "name" : "右腕",
+          "statuses" : []
         }
       ] ,
       "statuses" : [

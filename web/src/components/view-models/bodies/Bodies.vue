@@ -25,29 +25,18 @@
           </div>
         </td>
         <td>
-          <div v-for="status in body.statuses" :key="status.id">
-            <template v-if="status.type=='number'">
-              {{ status.name }} : {{ status.value }}
-            </template>
-            <template v-if="status.type=='boolean'">
-              {{ status.name }}
-            </template>
-          </div>
+          <status-design
+            v-for="status in body.statuses" :key="status.id"
+            :status="status"
+          ></status-design>
         </td>
         <td>
           <div v-for="freeSocket in body.freeSockets" :key="freeSocket.id">
             ( {{ freeSocket.x }} , {{ freeSocket.y  }} )
-            <div v-for="socketStatus in freeSocket.statuses" :key="socketStatus.id">
-              <template v-if="socketStatus.type=='number'" >
-                {{ socketStatus.name }} : {{ socketStatus.value }}
-              </template>
-              <template v-if="socketStatus.type=='multiplication'" >
-                {{ socketStatus.name }} : ×{{ socketStatus.value }}
-              </template>
-              <template v-if="socketStatus.type=='boolean'">
-                {{ socketStatus.name }}
-              </template>
-            </div>
+            <status-design
+              v-for="socketStatus in freeSocket.statuses" :key="socketStatus.id"
+              :status="socketStatus"
+            ></status-design>
           </div>
         </td>
         <td><button @click="()=>clickUpdateButton( body.id )" >更新</button></td>
@@ -67,8 +56,13 @@ import {
 } from 'vue'
 import { useStore } from 'vuex'
 
+import StatusDesign from '@/components/designs/Status.vue'
+
 export default defineComponent({
   name : 'BodiesViewModel' ,
+  components : {
+    StatusDesign
+  } ,
   setup( _  , context : SetupContext ){
     const state = reactive({})
     const store = useStore()
