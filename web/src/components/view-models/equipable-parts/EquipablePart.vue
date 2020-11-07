@@ -17,6 +17,11 @@
             type="text"
             name="名前"
           ></input-field-design>
+          <input-field-design
+            ref="displayOrderInputFieldRef"
+            type="number"
+            name="表示順序"
+          ></input-field-design>
         </template>
       </dialog-design>
     </div>
@@ -44,6 +49,7 @@ export default defineComponent({
     const store = useStore()
     const idInputFieldRef = ref()
     const nameInputFieldRef = ref()
+    const displayOrderInputFieldRef = ref()
     const clickNewEquipablePart = () => state.dialogShowing = true
     const clickCloseButton = () => state.dialogShowing = false
     const clickRegisterButton = () => store.dispatch( 'equipableParts/register' , {
@@ -54,6 +60,7 @@ export default defineComponent({
       state ,
       idInputFieldRef ,
       nameInputFieldRef ,
+      displayOrderInputFieldRef ,
       clickNewEquipablePart ,
       clickCloseButton ,
       clickRegisterButton ,
