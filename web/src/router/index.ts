@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // page components
-import Bodies from '@/containers/Bodies.vue'
-import EquipableParts from '@/containers/EquipableParts.vue'
-import Equipments from '@/containers/Equipments.vue'
-import Mysets from '@/containers/Mysets.vue'
-import Notifies from '@/containers/Notifies.vue'
-import ParameterChips from '@/containers/ParameterChips.vue'
-import Parameters from '@/containers/Parameters.vue'
-import Rates from '@/containers/Rates.vue'
-import Top from '@/containers/Top.vue'
+import Bodies from '@/pages/Bodies.vue'
+import EquipableParts from '@/pages/EquipableParts.vue'
+import Equipments from '@/pages/Equipments.vue'
+import Mysets from '@/pages/Mysets.vue'
+import Notifies from '@/pages/Notifies.vue'
+import ParameterChips from '@/pages/ParameterChips.vue'
+import Parameters from '@/pages/Parameters.vue'
+import Rates from '@/pages/Rates.vue'
+import Top from '@/pages/Top.vue'
 
 export default createRouter({
   history: createWebHistory(process.env.BASE_URL),
